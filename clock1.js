@@ -24,20 +24,20 @@ function draw() {
 	translate(200,200);
 	rotate(-90);
 	
-	strokeWeight(4);
-	stroke(255,100,150);
+	strokeWeight(8);
+	stroke(255,25,88);
 	noFill();
 	let endS = map (sc,0,59,0,360);
 	arc(0,0,250,250,0,endS);
 	
-	strokeWeight(4);
-	stroke(25,10,150);
+	strokeWeight(8);
+	stroke(0,193,255);
 	let endM = map (mn,0,59,0,360);
 	arc(0,0,270,270,0,endM);
 
 
-	strokeWeight(7);
-	stroke(144,10,150);
+	strokeWeight(8);
+	stroke(204,191,20);
 	let endH = map (hr % 12,0,12,0,360);
 	arc(0,0,290,290,0,endH);
 
