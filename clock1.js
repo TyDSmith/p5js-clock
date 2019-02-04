@@ -7,9 +7,7 @@ function setup() {
 
 function draw() {
 	background(0);
-	translate(200,200);
-	rotate(-90);
-
+	
 	var canHeight = 400;
 	var canWidth = 400;
 
@@ -17,6 +15,14 @@ function draw() {
 	let mn = minute();
 	let sc = second();
 	let ms = millis();
+
+	// fill(255);
+	// noStroke();
+	// textSize(20);
+	// text(hr%12 + ':' + mn + ':' + sc, canHeight/2, canWidth/2);
+
+	translate(200,200);
+	rotate(-90);
 	
 	strokeWeight(4);
 	stroke(255,100,150);
