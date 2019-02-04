@@ -1,30 +1,36 @@
 function setup() {
-	var canHeight = 300;
-	var canWidth = 300;
-  createCanvas(canWidth, canHeight);
+	var canHeight = 400;
+	var canWidth = 400;
+	createCanvas(canWidth, canHeight);
+	angleMode(DEGREES);
 }
 
 function draw() {
   background(0);
-	var canHeight = 300;
-	var canWidth = 300;
+	var canHeight = 400;
+	var canWidth = 400;
+
 	let hr = hour();
-	let min = minute();
-	let sec = second();
-	
-	strokeWeight(8);
-	stroke(255);
-	noFill();
-	ellipse((canHeight/2),canWidth/2,275,275);
+	let mn = minute();
+	let sc = second();
+	let ms = millis();
 	
 	strokeWeight(6);
 	stroke(255,100,150);
-	// let end = map (mouseX,0,width,0,360);
-	arc(150,150,275,275,0,360);
+	noFill();
+	let endS = map (sc,0,60,0,360);
+	arc(canHeight/2,canWidth/2,300,300,0,endS);
 	
-	
-// 	fill(155);
-// 	noStroke();
-// 	text(hr + ':' + min + ':' + sec, 150,150);
+	strokeWeight(9);
+	stroke(25,10,150);
+	noFill();
+	let endH = map (hr,0,60,0,360);
+	arc(canHeight/2,canWidth/2,300,300,0,endH);
+
+	strokeWeight(6);
+	stroke(25,10,150);
+	noFill();
+	let endM = map (mn,0,60,0,360);
+	arc(200,200,275,275,0,endM);
 	
 }
